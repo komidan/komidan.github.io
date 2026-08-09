@@ -1,0 +1,4 @@
+baseURL = 'https://'
+languageCode = 'en-us'
+title = 'My New Hugo Site'
+theme = 'maya'
