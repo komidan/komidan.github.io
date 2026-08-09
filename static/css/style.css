@@ -1,0 +1,266 @@
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  --max-width: clamp(320px, 90vw, 700px);
+
+  --bg: #282828;
+  --bg-soft: #3c3836;
+  --bg-bar: #504945;
+  --fg: #ebdbb2;
+  --fg-muted: #a89984;
+  --accent: #b16286;
+  --accent-2: #d3869b;
+  --border: #665c54;
+}
+
+html, body {
+  height: 100%;
+  background: var(--bg);
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  color: var(--fg);
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+
+a {
+  color: var(--accent);
+  transition: color 0.2s ease;
+}
+
+.content {
+  flex: 1 0 auto;
+  padding-bottom: 1rem;
+}
+
+.wrap {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.topnav-inner {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.75rem 1.25rem;
+  margin-top: 1rem;
+
+  background: var(--bg-soft);
+  border: 2px solid var(--border);
+  border-radius: 8px;
+  font-size: 1.75rem;
+}
+
+.topnav-inner nav {
+  display: flex;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.topnav-inner a {
+  text-decoration: none;
+  color: var(--fg);
+}
+
+.topnav-inner a:hover {
+  color: var(--accent);
+}
+
+.site-logo {
+  height: 32px;
+  width: auto;
+  display: block;
+  transition:
+    filter 0.3s ease,
+    transform 0.3s ease;
+}
+
+.site-logo:hover {
+  filter: drop-shadow(0 0 2px black);
+  transform: scale(1.2) rotate(10deg);
+}
+
+.status {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  flex-shrink: 0;
+  padding: 1rem 0;
+  max-width: calc(100vw - 2rem);
+}
+
+.status-inner {
+  display: inline-flex;
+  align-items: center;
+  gap: 1.5rem;
+  background: var(--bg-bar);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 0.5rem 1.25rem;
+  font-size: 1.2rem;
+  color: var(--fg-muted);
+  white-space: nowrap;
+}
+
+.status-inner a {
+  display: inline-flex;
+  align-items: center;
+  color: var(--fg-muted);
+  transition: color 0.2s ease;
+  text-decoration: none;
+}
+
+.status-inner a:hover {
+  color: var(--accent);
+}
+
+.status-inner svg {
+  display: block;
+}
+
+.content {
+  padding-bottom: 5rem;
+}
+
+@media (max-width: 480px) {
+  .status-inner {
+    gap: 0.75rem;
+    font-size: 0.75rem;
+    padding: 0.5rem 0.9rem;
+  }
+}
+
+.post-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.post-card {
+  padding: 1.5rem;
+  background: var(--bg-soft);
+  border: 2px solid var(--border);
+  border-radius: 8px;
+  scale: 1.02;
+  transition: scale 0.2s ease;
+}
+
+.post-card:hover {
+  scale: 1;
+}
+
+.post-title {
+  font-size: 2.2rem;
+  font-weight: 600;
+  color: var(--accent);
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.post-meta {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin: 0.15rem 0 1.15rem;
+  color: var(--fg-muted);
+  font-size: 1.20rem;
+  margin-bottom: 2rem;
+}
+
+.post-meta .dot {
+  opacity: 0.6;
+}
+
+.post-card p {
+  margin-bottom: 1rem;
+  font-size: 1.3rem;
+}
+
+.post-content {
+  line-height: 1.7;
+  font-size: 1.1rem;
+}
+
+.post-content h2,
+.post-content h3,
+.post-content h4 {
+  margin-top: 2rem;
+  margin-bottom: 0.75rem;
+}
+
+.post-content p {
+  margin: 1rem 0;
+  font-size: 1.4rem;
+}
+
+.post-content ul,
+.post-content ol {
+  padding-left: 1.5rem;
+  margin: 1rem 0;
+}
+
+.post-content ul li {
+  font-size: 1.3rem;
+}
+
+/* inline code (not in a fenced block) */
+.post-content :not(pre) > code {
+  background: var(--bg-soft);
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  padding: 0.15rem 0.4rem;
+  font-size: 0.9em;
+  font-family: "SF Mono", Consolas, monospace;
+}
+
+.post-content .highlight {
+  margin: 1.5rem 0;
+  padding: 0.75rem 1.25rem;
+  border-left: 3px solid var(--accent);
+  background: var(--bg-soft);
+  color: var(--fg-muted);
+  border-radius: 0 8px 8px 0;
+}
+
+.post-content .chroma {
+  overflow-x: auto;
+  font-size: 1.3rem;
+  background: none;
+}
+
+.post-content .chroma pre {
+  margin: 0;
+}
+
+.post-content .chroma code {
+  background: none;
+  border: none;
+  padding: 0;
+}
+
+.post-content img {
+  max-width: 100%;
+  border-radius: 8px;
+  margin: 1.5rem 0;
+}
+
+.post-content hr {
+  border: none;
+  height: 1px;
+  background: var(--fg-muted);
+  margins: 2rem 0;
+}
+
+.list-title {
+  font-size: 2.5rem;
+}

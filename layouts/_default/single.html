@@ -1,0 +1,15 @@
+{{ define "posts" }}
+<article>
+  <h1 class="post-title">{{ .Title }}</h1>
+
+  <div class="post-meta">
+    <time>{{ .Date.Format "Jan 2, 2006" }}</time>
+    <span class="dot">•</span>
+    <span>{{ .ReadingTime }} min read</span>
+  </div>
+
+  <div class="post-content">
+    {{ .Content }}
+  </div>
+</article>
+{{ end }}

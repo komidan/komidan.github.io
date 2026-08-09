@@ -1,0 +1,51 @@
+<!-- This is for "shared skeleton"  -->
+
+<!DOCTYPE html>
+<html lang="{{ .Site.LanguageCode }}">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>{{ if .IsHome }}{{ .Site.Title}}{{ else }}{{ .Site.Title }} - {{ .Title }}{{ end }}</title>
+
+  <link rel="stylesheet" href='{{ "css/style.css" | relURL }}'>
+  <link rel="stylesheet" href='{{ "css/syntax.css" | relURL }}'>
+</head>
+
+<body>
+  <!-- NAVBAR -->
+  <header class="topnav">
+    <div class="wrap topnav-inner">
+      <a class="brand" href='{{ "/" | relURL }}'>
+        <img class="site-logo" src='{{ "images/maya.png" | relURL }}' alt='{{ .Site.Title }}'>
+      </a>
+      <nav>
+        {{ range .Site.Menus.main }}
+          <a href="{{ .URL | relURL }}"> {{ .Name }}</a>
+        {{ end }}
+      </nav>
+    </div>
+  </header>
+
+  <!-- MAIN CONTENT -->
+  <main class="content wrap">
+    {{ block "posts" . }}{{end}}
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="status">
+    <div class="wrap status-inner">
+      <!-- Page Copyright + Build -->
+      <span>© {{ now.Year }} {{ .Site.Params.author }}</span>
+      <a href="https://gohugo.io/">Hugo {{ hugo.Version }}</a>
+
+      <!-- Personal Links -->
+      {{ range .Site.Params.social }}
+      <a href="{{ .url }}" target="_blank" rel="noopener" aria-label="{{ .name }}">
+        {{ partial "icon.html" (dict "name" .name) }}
+      </a>
+      {{ end }}
+    </div>
+  </footer>
+</body>
+</html>

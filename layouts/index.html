@@ -1,0 +1,28 @@
+{{ define "posts" }}
+<h1 class="list-title">Latest Blog Posts</h1>
+<ul class="post-list">
+  {{ range first 3 (where .Site.RegularPages "Type" "posts") }}
+    <li class="post-card">
+      <a class="post-title" href="{{ .RelPermalink }}">{{ .Title }}</a>
+
+      <div class="post-meta">
+        <time>{{ .Date.Format "Jan 2, 2006" }}</time>
+        <span class="dot">•</span>
+        <span>{{ .ReadingTime }} min read</span>
+      </div>
+
+      <p class="post-summary">
+        {{ if .Params.summary }}
+          {{ .Params.summary }}
+        {{ else }}
+          {{ .Summary }}
+        {{ end }}
+      </p>
+
+      {{ if and (not .Params.summary) .Truncated }}
+        <a class="read-more" href="{{ .RelPermalink }}">Read More</a>
+      {{ end }}
+    </li>
+  {{ end }}
+</ul>
+{{ end }}
