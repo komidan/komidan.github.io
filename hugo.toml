@@ -2,7 +2,7 @@ baseURL = 'https://komidan.github.io/'
 title = 'komidan'
 
 [locale]
-  language = 'en-us'
+  language = 'en-US'
 
 [params]
   author = "komidan"
