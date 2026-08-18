@@ -35,16 +35,16 @@
   <!-- FOOTER -->
   <footer class="status">
     <div class="wrap status-inner">
-      <!-- Page Copyright + Build -->
-      <span>© {{ now.Year }} {{ .Site.Params.author }}</span>
-      <a href="https://gohugo.io/">Hugo {{ hugo.Version }}</a>
-
       <!-- Personal Links -->
       {{ range .Site.Params.social }}
       <a href="{{ .url }}" target="_blank" rel="noopener" aria-label="{{ .name }}">
         {{ partial "icon.html" (dict "name" .name) }}
       </a>
       {{ end }}
+
+      <!-- Page Copyright + Build -->
+      <span>© {{ now.Year }} {{ .Site.Params.author }}</span>
+      <a href="https://gohugo.io/">Hugo {{ hugo.Version }}</a>
     </div>
   </footer>
 </body>

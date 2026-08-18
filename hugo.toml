@@ -13,6 +13,10 @@ languageCode = 'en-US'
     name = "youtube"
     url = "https://youtube.com/@komidan_"
 
+  [[params.social]]
+    name = "email"
+    url = "mailto:komidan.gg@gmail.com"
+
 [[menu.main]]
   name = "home"
   url = "/"
