@@ -5,17 +5,15 @@ date = '2026-11-12T19:11:40-05:00'
 draft = true
 +++
 
-Welcome to the **Markdown Feature Showcase**! This post exists to test how your Hugo theme renders different Markdown elements.
-
-You can use this page to check typography, spacing, syntax highlighting, tables, lists, and more.
+### ***Generated with ChatGPT because I am wayyyy to lazy to make this myself. It's just for testing.***
 
 ---
 
 ## 1. Text Formatting
 
-This paragraph contains **bold text**, *italic text*, ***bold and italic text***, ~~strikethrough text~~, and `inline code`.
+This paragraph contains **bold text**, _italic text_, _**bold and italic text**_, ~~strikethrough text~~, and `inline code`.
 
-You can also combine formatting: **bold with *italic* inside**, or ~~strikethrough with `inline code`~~.
+You can also combine formatting: **bold with _italic_ inside**, or ~~strikethrough with `inline code`~~.
 
 Here is a [link to GitHub](https://github.com/) and an example of an automatic URL: https://gohugo.io/.
 
@@ -120,21 +118,21 @@ fi
 ```html
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Example Page</title>
-</head>
-<body>
+  </head>
+  <body>
     <header>
-        <h1>Hello, world!</h1>
+      <h1>Hello, world!</h1>
     </header>
 
     <main>
-        <p>This is an example HTML document.</p>
-        <a href="/about/">About</a>
+      <p>This is an example HTML document.</p>
+      <a href="/about/">About</a>
     </main>
-</body>
+  </body>
 </html>
 ```
 
@@ -142,24 +140,24 @@ fi
 
 ```css
 :root {
-    --bg: #282828;
-    --fg: #ebdbb2;
-    --accent: #d3869b;
+  --bg: #282828;
+  --fg: #ebdbb2;
+  --accent: #d3869b;
 }
 
 body {
-    background: var(--bg);
-    color: var(--fg);
-    font-family: monospace;
+  background: var(--bg);
+  color: var(--fg);
+  font-family: monospace;
 }
 
 a {
-    color: var(--accent);
-    transition: color 200ms ease;
+  color: var(--accent);
+  transition: color 200ms ease;
 }
 
 a:hover {
-    text-decoration: none;
+  text-decoration: none;
 }
 ```
 
@@ -169,16 +167,16 @@ a:hover {
 const characters = ["🐎", "馬", "猫", "ツ"];
 
 function randomCharacter() {
-    const index = Math.floor(Math.random() * characters.length);
-    return characters[index];
+  const index = Math.floor(Math.random() * characters.length);
+  return characters[index];
 }
 
 document.addEventListener("DOMContentLoaded", () => {
-    const title = document.querySelector("#site-title");
+  const title = document.querySelector("#site-title");
 
-    if (title) {
-        title.textContent += randomCharacter();
-    }
+  if (title) {
+    title.textContent += randomCharacter();
+  }
 });
 ```
 
@@ -196,3 +194,4 @@ function describeProject(project: Project): string {
 }
 
 const project:
+```
