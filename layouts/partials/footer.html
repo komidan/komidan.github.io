@@ -1,0 +1,11 @@
+<footer>
+    <div>
+        {{ range $name, $url := .Site.Params.social }}
+            <a href="{{ $url }}">{{ $name }}</a>
+        {{ end }}
+    </div>
+    <small>
+        &copy; {{ now.Year }} {{ .Site.Title }}
+        / Made with <a href="https://gohugo.io/">Hugo</a>
+    </small>
+</footer>

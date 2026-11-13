@@ -1,0 +1,22 @@
+{{ define "main" }}
+    <article class="post">
+        <header>
+            <h1>{{ .Title }}</h1>
+            <small>
+                <time datetime="{{ .Date.Format "2006-01-02" }}">
+                    {{ .Date.Format "2006-01-02" }}
+                </time>
+                /
+                <span class="status status-{{ .Params.status}}">
+                    [{{ .Params.status }}]
+                </span>
+                /
+                <a class="source-link" href="{{ .Params.repo }}">source</a>
+            </small>
+        </header>
+
+        <div class="content">
+            {{ .Content }}
+        </div>
+    </article>
+{{ end }}

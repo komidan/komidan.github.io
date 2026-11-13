@@ -1,0 +1,17 @@
+<header>
+    <a href="{{ .Site.Home.RelPermalink }}" id="site-title">
+        {{ .Site.Title }},
+    </a>
+
+    <nav>
+        <a href="{{ .Site.Home.RelPermalink }}">home</a>
+        <a href="{{ "posts/" | relURL }}">posts</a>
+        <a href="{{ "projects/" | relURL }}">projects</a>
+        <a href="{{ "about/" | relURL }}">about</a>
+    </nav>
+    <script>
+      const characters = ["🐎", "馬", "😝", "😏", "😎", "😌"];
+      const c = characters[Math.floor(Math.random() * characters.length)];
+      document.getElementById("site-title").textContent += ` ${c}`;
+    </script>
+</header>

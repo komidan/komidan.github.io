@@ -1,0 +1,10 @@
+{{ define "main" }}
+    <h1>{{ .Title }}</h1>
+        {{ .Description }}
+        {{ .Content }}
+
+        {{ partial "post-list.html" (dict
+            "pages" .RegularPages
+            "limit" 999
+        ) }}
+{{ end }}

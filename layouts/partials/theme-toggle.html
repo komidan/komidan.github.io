@@ -1,0 +1,34 @@
+<button id="theme-toggle" role="button" tabindex="0" aria-label="Switch theme">
+    日
+</button>
+
+<script>
+    const toggle = document.getElementById("theme-toggle");
+
+    function setTheme(theme) {
+        document.documentElement.dataset.theme = theme;
+        localStorage.setItem("theme", theme);
+
+        toggle.textContent = theme === "dark" ? "日" : "月";
+        toggle.setAttribute(
+            "aria-label",
+            theme === "dark" ? "Switch to light mode" : "Switch to dark mode"
+        );
+    }
+
+    setTheme(localStorage.getItem("theme") || "dark");
+
+    function toggleTheme() {
+        const current = document.documentElement.dataset.theme;
+        setTheme(current === "dark" ? "light" : "dark");
+    }
+
+    toggle.addEventListener("click", toggleTheme);
+
+    toggle.addEventListener("keydown", (event) => {
+        if (event.key === "Enter" || event.key === " ") {
+            event.preventDefault();
+            toggleTheme();
+        }
+    });
+</script>

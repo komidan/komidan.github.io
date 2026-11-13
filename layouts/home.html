@@ -1,0 +1,18 @@
+{{ define "main" }}
+    <h1>{{ .Title }}</h1>
+    {{ .Content }}
+    <section>
+        <h2>Recent Posts</h2>
+        {{ partial "post-list.html" (dict
+            "pages" (where site.RegularPages "Section" "posts")
+            "limit" 3
+        ) }}
+    </section>
+    <section>
+        <h2>Current Projects</h2>
+        {{ partial "project-list.html" (dict
+            "pages" (where site.RegularPages "Section" "projects")
+            "activeOnly" true
+        ) }}
+    </section>
+{{ end }}

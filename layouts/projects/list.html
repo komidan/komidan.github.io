@@ -1,0 +1,9 @@
+{{ define "main" }}
+    <h1>{{ .Title  }}</h1>
+    {{ .Content }}
+
+    {{ partial "project-list.html" (dict
+        "pages" .RegularPages
+        "activeOnly" false
+    ) }}
+{{ end }}

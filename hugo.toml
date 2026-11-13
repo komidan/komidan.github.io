@@ -1,0 +1,22 @@
+baseURL = 'https://komidan.github.io/'
+locale = 'en-us'
+title = 'komidan'
+disableKinds = [ "taxonomy", "term" ]
+
+[params]
+ description = 'imok, nadimok'
+  [params.social]
+    youtube = "https://youtube.com/komidan_"
+    github = "https://github.com/komidan"
+    email = "mailto:komidan.gg+contact@gmail.com"
+
+[markup]
+    [markup.highlight]
+        style = "gruvbox"
+        lineNos = true
+        codeFences = true
+        noClasses = false
+
+    [markup.tableOfContents]
+        startLevel = 2
+        endLevel = 4

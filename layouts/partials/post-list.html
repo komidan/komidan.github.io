@@ -1,0 +1,20 @@
+{{ $pages := sort .pages "Date" "desc" }}
+
+{{ if .limit }}
+    {{ $pages = first .limit $pages }}
+{{ end }}
+
+<ol>
+    {{ range $pages }}
+    <li>
+        <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+        <small>
+            <time datetime="{{ .Date.Format "2006-01-02" }}">
+                {{ .Date.Format "2006-01-02" }}
+            </time>
+            / {{ .ReadingTime }} min read
+        </small>
+        <div>{{ .Description }}</div>
+    </li>
+    {{ end }}
+</ul>
