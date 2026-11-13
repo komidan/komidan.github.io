@@ -1,5 +1,5 @@
 <footer>
-    <div>
+    <div class="socials">
         {{ range $name, $url := .Site.Params.social }}
             <a href="{{ $url }}">{{ $name }}</a>
         {{ end }}
