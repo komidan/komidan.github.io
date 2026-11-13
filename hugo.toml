@@ -6,7 +6,7 @@ disableKinds = [ "taxonomy", "term" ]
 [params]
  description = 'imok, nadimok'
   [params.social]
-    youtube = "https://youtube.com/komidan_"
+    youtube = "https://youtube.com/@komidan_"
     github = "https://github.com/komidan"
     email = "mailto:komidan.gg+contact@gmail.com"
 
