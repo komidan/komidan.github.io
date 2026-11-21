@@ -101,8 +101,8 @@ h1 {
 }
 
 blockquote {
-    margin: 1.5rem 0;
-    padding: 0.25rem 0 0.25rem 1rem;
+    margin: 1ch;
+    padding: 0.1ch 0 0.1ch 1rem;
 
     border-left: 3px solid var(--border);
 
@@ -111,7 +111,8 @@ blockquote {
     color: var(--muted);
 }
 
-ul li a, ol li a {
+ul li a,
+ol li a {
     font-size: 11pt;
 }
 
@@ -124,7 +125,7 @@ time,
 small {
     margin: 0;
     color: var(--muted);
-    font-size: 0.6rem;
+    font-size: 8.5pt;
 }
 
 /* Links */
@@ -138,14 +139,13 @@ a:hover {
 
 nav a,
 footer div a,
-footer small a,
-.source-link {
+footer small a {
     text-decoration: none;
 }
 
 .source-link {
     color: var(--link);
-    font-size: 0.6rem;
+    font-size: inherit;
 }
 
 /* Separators */
