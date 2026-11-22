@@ -63,7 +63,7 @@ body {
     margin: 40px auto;
     padding: 0 16px;
 
-    font-family: monospace;
+    /* font-family: monospace; */
     line-height: 1.6;
 }
 
@@ -113,7 +113,7 @@ blockquote {
 
 ul li a,
 ol li a {
-    font-size: 11pt;
+    font-size: 13pt;
 }
 
 ol,
@@ -260,5 +260,5 @@ hr {
 .content pre,
 .content code,
 .content .chroma {
-    font-family: "JetBrains Mono", monospace;
+    font-family: monospace;
 }
